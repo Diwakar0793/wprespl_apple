@@ -359,6 +359,16 @@ h6 {
     left: -100%;
     visibility: visible;
   }
+
+  /* Highlight parent menu (e.g. Services) when sub-item is active - Desktop */
+  .navmenu .dropdown.dropdown-active > a,
+  .navmenu .dropdown.dropdown-active > a:focus {
+    color: var(--nav-hover-color) !important;
+    background-color: rgba(255, 196, 81, 0.2);
+    border-radius: 6px;
+    font-weight: 500;
+  }
+
   .btn-mobile{
     display: none;
   }
@@ -467,11 +477,13 @@ h6 {
     background-color: rgba(33, 37, 41, 0.03);
   }
 
-  /* Highlight dropdown parent when sub-item is active */
-  .navmenu .dropdown.dropdown-active > a {
+  /* Highlight dropdown parent when sub-item is active - Mobile */
+  .navmenu .dropdown.dropdown-active > a,
+  .navmenu .dropdown.dropdown-active > a:focus {
     color: var(--nav-hover-color) !important;
-    background-color: rgba(255, 196, 81, 0.15);
+    background-color: rgba(255, 196, 81, 0.2);
     border-radius: 6px;
+    font-weight: 500;
   }
 
   .mobile-nav-active {
