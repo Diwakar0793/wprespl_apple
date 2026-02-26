@@ -277,6 +277,20 @@ h6 {
     color: var(--nav-hover-color);
   }
 
+  /* Highlight selected/active nav item */
+  .navmenu a.active,
+  .navmenu a.active:focus {
+    color: var(--nav-hover-color) !important;
+    background-color: rgba(255, 196, 81, 0.2);
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  .navmenu > ul > li > a:hover,
+  .navmenu > ul > li > a:focus {
+    background-color: rgba(255, 196, 81, 0.12);
+    border-radius: 6px;
+  }
+
   .navmenu .dropdown ul {
     margin: 0;
     padding: 10px 0;
@@ -408,6 +422,12 @@ h6 {
     background-color: var(--nav-dropdown-hover-color);
   }
 
+  /* Highlight selected nav item on mobile */
+  .navmenu a.active {
+    background-color: rgba(255, 196, 81, 0.25);
+    font-weight: 500;
+  }
+
   .navmenu .active i,
   .navmenu .active:focus i {
     transform: rotate(180deg);
@@ -432,6 +452,13 @@ h6 {
   .navmenu .dropdown>.dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
+  }
+
+  /* Highlight dropdown parent when sub-item is active */
+  .navmenu .dropdown.dropdown-active > a {
+    color: var(--nav-hover-color) !important;
+    background-color: rgba(255, 196, 81, 0.15);
+    border-radius: 6px;
   }
 
   .mobile-nav-active {
@@ -1770,6 +1797,14 @@ section,
   max-width: 200px !important;
   border-radius: 5px;
   margin: 0px 10px;
+}
+
+/* Highlight Contact/Support when active */
+.btn-header a.active,
+.btn-mobile a.active {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* Support */

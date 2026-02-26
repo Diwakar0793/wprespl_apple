@@ -22,9 +22,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Send email
     if (mail($to, $subject, $body, $headers)) {
-        echo "<script>alert('Message sent successfully!'); window.location.href = 'index.html';</script>";
+        echo "<script>alert('Message sent successfully!'); window.location.href = 'homepage.html';</script>";
     } else {
-        echo "<script>alert('There was a problem sending your message. Please try again later.'); window.location.href = 'index.html';</script>";
+        echo "<script>alert('There was a problem sending your message. Please try again later.'); window.location.href = 'homepage.html';</script>";
     }
 } else {
     echo "Invalid request method.";
